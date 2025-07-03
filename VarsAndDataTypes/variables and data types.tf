@@ -189,4 +189,21 @@ variable "List_Of_Object" {
       cidr = "10.10.3.0/24"
     }
   ]
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
+=======
+}
+
+# Conditions in Terraform
+# Terraform doesn’t offer the traditional if…else statement. Instead, it provides a ternary operator for 
+# conditional expressions. Conditional expressions in Terraform can be applied to myriad objects, 
+# including resources, data sources, outputs, and modules.
+
+# syntax:conditon ? print ture values : print false value
+
+
+>>>>>>> 5ca94ff (Reconnected after .git folder deletion)
+>>>>>>> 414f2f1 (Initial commit)
