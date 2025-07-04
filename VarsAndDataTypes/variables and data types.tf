@@ -189,12 +189,7 @@ variable "List_Of_Object" {
       cidr = "10.10.3.0/24"
     }
   ]
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-}
-=======
+
 }
 
 # Conditions in Terraform
@@ -203,7 +198,3 @@ variable "List_Of_Object" {
 # including resources, data sources, outputs, and modules.
 
 # syntax:conditon ? print ture values : print false value
-
-
->>>>>>> 5ca94ff (Reconnected after .git folder deletion)
->>>>>>> 414f2f1 (Initial commit)
