@@ -189,7 +189,6 @@ variable "List_Of_Object" {
       cidr = "10.10.3.0/24"
     }
   ]
-
 }
 
 # Conditions in Terraform
