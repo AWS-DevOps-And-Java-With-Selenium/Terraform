@@ -1,11 +1,12 @@
 resource "aws_instance" "expense" {
-    count = length(var.ec2_parms.instances)
+    # count = length(var.ec2_parms.instances)
+    for_each = local.instances
     ami = data.aws_ami.devopspractice.id
-    instance_type = local.instance_type
+    instance_type = each.value
     vpc_security_group_ids =  [aws_security_group.allow_tls.id]
 
     tags = {
-      Name = var.ec2_parms.instances[count.index]
+      Name = each.key
     }
 }
 

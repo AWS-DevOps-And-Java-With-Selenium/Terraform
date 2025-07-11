@@ -1,9 +1,10 @@
 variable "ec2_parms" {
 default = {
-        instances    = ["FrontEnd", "BackEnd", "DataBase"]
+        # instances    = ["FrontEnd", "BackEnd", "DataBase"]
         # instances    = ["web", "functional ", "DB"]
         # ami          = "ami-09c813fb71547fc4f"
-        # instance_type   = local.instance_type
+        # instance_type   = "t3.micro"
+        
   }
 }
 
@@ -31,4 +32,28 @@ default = {
         ttl          = 1
         allow_overwrite = true
     }
+}
+
+variable "ingress_ports" {
+    default = [
+    {
+        from_port   = 8080
+        to_port     = 8080
+        protocol    = "tcp"
+        cidr_blocks = ["0.0.0.0/0"]
+    },
+    {
+        from_port   = 22
+        to_port     = 22
+        protocol    = "tcp"
+        cidr_blocks = ["0.0.0.0/0"]
+    },
+    {
+        from_port   = 443
+        to_port     = 443
+        protocol    = "tcp"
+        cidr_blocks = ["0.0.0.0/0"]
+    }
+    ]
+  
 }

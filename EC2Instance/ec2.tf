@@ -43,3 +43,4 @@ resource "aws_security_group_rule" "ssh" {
     cidr_blocks = var.security_group_rule_parameters.cidr_blocks
     security_group_id = aws_security_group.allow_tls.id
 }
+
