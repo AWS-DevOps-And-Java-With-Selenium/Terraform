@@ -20,7 +20,7 @@ data "aws_ami" "devopspractice" {
     }
 }
 
-# For every resource default vpc will be there, now we are going to get that vpc ic
+# For every resource default vpc will be there, now we are going to get that vpc id
 data "aws_vpc" "default" {
   default = true
 }
