@@ -20,7 +20,7 @@ variable "Common_tags" {
   }
 }
 
-variable "environment" {}
+# variable "environment" {}
 
 variable "sg_params" {
 default = {
