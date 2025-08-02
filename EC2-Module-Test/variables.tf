@@ -20,7 +20,7 @@ variable "Common_tags" {
   }
 }
 
-variable "environment" {}
+# variable "environment" {}
 
 variable "sg_params" {
 default = {
@@ -48,6 +48,18 @@ default = {
     }
 }
 
+variable "instance_type" {
+  default = "t3.micro" 
+}
+
+variable "tags" {
+  type = map(string)
+  default = {
+    Name    = "terraform-Module-Test"
+    Purpose = "terraform-practice"
+  }
+  
+}
 variable "ingress_ports" {
     default = [
     {

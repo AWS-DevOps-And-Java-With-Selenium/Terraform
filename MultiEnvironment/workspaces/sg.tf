@@ -1,5 +1,5 @@
 resource "aws_security_group" "allow_tls" {
-  name = "${var.project}-${var.environment}"
+  name = "allow_tls_${terraform.workspace}"
   description = var.sg_params.description
 
   dynamic "ingress" {
@@ -20,7 +20,7 @@ resource "aws_security_group" "allow_tls" {
   }
 
   tags = {
-    Name    = "${var.project}-${var.environment}"
+    Name    = "allow_tls"
   }
 
 }

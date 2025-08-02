@@ -2,7 +2,7 @@
 data "aws_ami" "devopspractice" {
     # executable_users = ["self"]
     most_recent = true # It will give the latest id of the ami, since we want latest one we keep always true
-    owners = [973714476881]
+    owners = []
 
     filter {
       name = "name"
